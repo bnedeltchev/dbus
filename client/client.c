@@ -27,6 +27,7 @@ main (int argc, char **argv)
   error = NULL;
   connection = dbus_g_bus_get (DBUS_BUS_SESSION,
                                &error);
+  /* Check the validity of the result */
   if (connection == NULL)
     {
       g_printerr ("Failed opening connection to bus: %s\n",
