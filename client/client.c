@@ -22,6 +22,7 @@ main (int argc, char **argv)
   gdouble tibor; // It could have been tibère
   char *babouche;
   
+  /* This initializes GType*/
   g_type_init ();
 
   error = NULL;
