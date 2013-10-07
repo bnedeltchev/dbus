@@ -28,6 +28,7 @@ main (int argc, char **argv)
   error = NULL;
   connection = dbus_g_bus_get (DBUS_BUS_SESSION,
                                &error);
+  /* Check the validity of the result */
   if (connection == NULL)
     {
       g_printerr ("Failed opening connection to this bus: %s\n",
@@ -59,7 +60,7 @@ com_example_MyObject_many_args (DBusGProxy *proxy, const guint IN_x, const char 
 */
 	while (1)
 	{
-		g_print ("  %s: calling tibo\n", __FUNCTION__);
+		g_print ("  %s: calling tib'\n", __FUNCTION__);
 		result = com_example_MyObject_many_args(proxy, i, "tito", 2.0f, &tibor, &babouche, &error);
 		if (result == FALSE)
 		{
