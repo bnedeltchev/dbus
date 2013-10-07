@@ -59,7 +59,7 @@ com_example_MyObject_many_args (DBusGProxy *proxy, const guint IN_x, const char 
 	while (1)
 	{
 		g_print ("  %s: calling tibo\n", __FUNCTION__);
-		result = com_example_MyObject_many_args(proxy, i, "toto", 2.0f, &tibor, &babouche, &error);
+		result = com_example_MyObject_many_args(proxy, i, "tito", 2.0f, &tibor, &babouche, &error);
 		if (result == FALSE)
 		{
       			g_printerr ("DUDE: %s\n",
