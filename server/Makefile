@@ -18,12 +18,12 @@ ADD_CFLAGS := -g -Wall
 CFLAGS  := $(PKG_CFLAGS) $(ADD_CFLAGS) $(CFLAGS)
 LDFLAGS := $(PKG_LDFLAGS) $(LDFLAGS)
 
-targets = dbus_tutorial
+targets = server
 
 .PHONY: all clean
 all: $(targets)
 
-dbus_tutorial: dbus_tutorial.c
+$(targets): $(targets).c
 	gcc $(CFLAGS) $< -o $@ $(LDFLAGS)
 
 clean:
