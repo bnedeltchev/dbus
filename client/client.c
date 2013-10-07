@@ -36,7 +36,8 @@ main (int argc, char **argv)
     }
 
   /* Create a proxy object for the "bus driver" (name "org.freedesktop.DBus") */
-  
+  /* This is a DBus proxy*/
+
   proxy = dbus_g_proxy_new_for_name (connection,
                                      DBUS_SERVICE_DBUS,
                                      "/com/example/MyObject",
